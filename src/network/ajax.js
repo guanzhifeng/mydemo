@@ -12,7 +12,7 @@ function ajax(method,url,params){
     return new Promise((resolve,reject) => {
         const axioss = axios.create({
             timeout:10000,
-            baseURL:'http://123.207.32.32:8000'
+            // baseURL:'http://123.207.32.32:8000'
         })
 
         //请求拦截
@@ -40,9 +40,14 @@ function ajax(method,url,params){
 }
 
 
+// export default {
+//     install: function (Vue) {
+//         Vue.prototype.ajaxGet = (url,params) => ajax('GET',url,params)
+//         Vue.prototype.ajaxPost = (url,data) => ajax('POST',url,data)
+//     }
+// }
+
 export default {
-    install: function (Vue) {
-        Vue.prototype.ajaxGet = (url,params) => ajax('GET',url,params)
-        Vue.prototype.ajaxPost = (url,data) => ajax('POST',url,data)
-    }
+        get : (url,params) => ajax('GET',url,params),
+        post : (url,data) => ajax('POST',url,data)
 }

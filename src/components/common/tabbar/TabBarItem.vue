@@ -23,7 +23,6 @@
 		},
 		computed:{
 			on(){
-
 				// return this.$route.path.indexOf(this.path) != -1;
 				return this.$route.path === this.path;
 			},
@@ -52,7 +51,4 @@
 		margin-top: 3px;
 		vertical-align: middle;
 	}
-/* 	.textcolor{
-		color: #1296DB;
-	} */
 </style>
