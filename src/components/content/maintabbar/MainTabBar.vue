@@ -1,8 +1,8 @@
 <template>
 	<tab-bar>
 		<tab-bar-item v-for="tab in tabbarlist" :path="'/'+tab.icon">
-			<img slot='item-icon' :src="getimg(tab.icon)"/>
-			<img slot='item-icon-on' :src="getimgon(tab.icon)"/>
+			<img slot='item-icon' :src="getimg(tab.icon)" alt=""/>
+			<img slot='item-icon-on' :src="getimgon(tab.icon)" alt=""/>
 			<div slot='item-text'>{{tab.text}}</div>
 		</tab-bar-item>
 	</tab-bar>
@@ -11,7 +11,7 @@
 <script>
 	import TabBar from '@/components/common/tabbar/TabBar.vue';
 	import TabBarItem from '@/components/common/tabbar/TabBarItem.vue';
-	
+
 	export default {
 	  name: 'MainTabBar',
 		components:{
@@ -37,7 +37,7 @@
 			}
 		}
 	}
-	
+
 </script>
 
 <style>
